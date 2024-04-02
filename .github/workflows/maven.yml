@@ -35,10 +35,7 @@ jobs:
         distribution: 'adopt'
         cache: maven
 
-    - name: Grant execute permissions to mvnw
-      run: chmod +x mvnw
-
     - name: Build Quarkus application
       working-directory: ads
       run: |
-        ./mvnw clean package -DskipTests
+        mvn clean package -DskipTests
